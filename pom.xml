@@ -52,6 +52,8 @@
                 <inherited>false</inherited>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <!-- assembly:assembly 2.5.5 支持， 2.6 不支持 -->
+                <version>2.5.5</version>
                 <configuration>
                     <finalName>chaosblade-java-agent</finalName>
                     <descriptors>
