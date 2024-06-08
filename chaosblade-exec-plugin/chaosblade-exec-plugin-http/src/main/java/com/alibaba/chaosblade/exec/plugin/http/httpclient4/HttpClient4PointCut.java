@@ -31,6 +31,7 @@ public class HttpClient4PointCut implements PointCut {
     public MethodMatcher getMethodMatcher() {
         AndMethodMatcher methodMatcher = new AndMethodMatcher();
         OrMethodMatcher orMethodMatcher = new OrMethodMatcher();
+        // 用或似乎会有 bug ，会注入两次
         orMethodMatcher.or(new NameMethodMatcher("execute")).or(new NameMethodMatcher("doExecute"));
 
         ParameterMethodMatcher parameterMethodMatcher = new ParameterMethodMatcher(new String[]{
